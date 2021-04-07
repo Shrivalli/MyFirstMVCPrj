@@ -1,0 +1,23 @@
+﻿@* To bind a model to the view @model *@
+@model IEnumerable<FirstMVCApp.Models.Employee >
+@{
+    ViewBag.Title = "GetDetail";
+}
+@* Model - dynamic property like a viewbag *@
+<h2>GetDetail</h2>
+<table class="table-bordered">
+    <tr>
+        <td> Empid </td>
+        <td> Empname </td>
+        <td> Salary </td>
+    </tr>
+    @foreach(var item in Model)
+    {
+<tr>
+    <td>@item.Empid</td>
+    <td>@item.Empname</td>
+    <td>@item.Salary</td>
+</tr>
+    }
+</table>
+
